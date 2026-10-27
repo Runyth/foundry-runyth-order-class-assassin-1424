@@ -1,0 +1,199 @@
+{
+  "_key": "!items!a551a551a551a551",
+  "_id": "a551a551a551a551",
+  "name": "Assassin 1424",
+  "type": "subclass",
+  "img": "icons/skills/melee/strike-dagger-blood-red.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "effects": [],
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "assassin-1424",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "advancement": true
+      },
+      "provenance": "Runyth",
+      "contentHash": "1fcb197953c2cdff568bf09958d82690873fee91b7f963dad4dc0e0d21781cc3"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.character-options",
+        "entryId": "assassin-1424",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.character-options.Item.a551a551a551a551",
+        "contentVersion": "1.0.5",
+        "checksum": "1fcb197953c2cdff568bf09958d82690873fee91b7f963dad4dc0e0d21781cc3",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<h1>Assassin 1424</h1><p>A Rogue subclass for ambushes, infiltration, theatrical escape, urban pursuit, and decisive turn control.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "runyth-order-class-assassin-1424",
+    "classIdentifier": "rogue",
+    "advancement": [
+      {
+        "_id": "ad03000000000001",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a551000000000003",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": ""
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Assassinate",
+        "icon": "icons/skills/melee/strike-dagger-blood-red.webp"
+      },
+      {
+        "_id": "ad03000000000002",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a552000000000003",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": ""
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Assassin’s Tools",
+        "icon": "icons/skills/melee/strike-dagger-blood-red.webp"
+      },
+      {
+        "_id": "ad09000000000001",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a553000000000009",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": ""
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Infiltration Expertise",
+        "icon": "icons/skills/melee/strike-dagger-blood-red.webp"
+      },
+      {
+        "_id": "ad13000000000001",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a554000000000013",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a556000000000013",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": ""
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Shadow in the Night",
+        "icon": "icons/skills/melee/strike-dagger-blood-red.webp"
+      },
+      {
+        "_id": "ad17000000000001",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a555000000000017",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "preparation": "",
+            "uses": {
+              "max": "",
+              "per": ""
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Seize the Moment",
+        "icon": "icons/skills/melee/strike-dagger-blood-red.webp"
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {}
+    }
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

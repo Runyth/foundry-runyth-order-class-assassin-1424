@@ -1,0 +1,55 @@
+<div class="runyth-order-class-assassin-1424-manager__body" aria-busy="{{busy}}">
+  <header class="runyth-order-class-assassin-1424-manager__header">
+    <div>
+      <h1>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Title"}}</h1>
+      <p>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Intro"}}</p>
+    </div>
+    <span class="runyth-order-class-assassin-1424-version">v{{version}}</span>
+  </header>
+
+  {{#if actor}}
+    <section class="runyth-order-class-assassin-1424-panel">
+      <h2><img src="{{actor.img}}" alt=""> {{actor.name}}</h2>
+      <div class="runyth-order-class-assassin-1424-actions">
+        <button type="button" data-action="dry-run" {{disabled busy}}><i class="fa-solid fa-magnifying-glass"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.DryRun"}}</button>
+        <button type="button" data-action="sync" {{disabled busy}}><i class="fa-solid fa-screwdriver-wrench"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Sync"}}</button>
+        <button type="button" data-action="audit" {{disabled busy}}><i class="fa-solid fa-clipboard-check"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Audit"}}</button>
+      </div>
+      <div class="runyth-order-class-assassin-1424-actions">
+        <button type="button" data-action="disappearing-act" {{disabled busy}}><i class="fa-solid fa-smog"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.DisappearingAct.Title"}}</button>
+        <button type="button" data-action="seize-the-moment" {{disabled busy}}><i class="fa-solid fa-bolt"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Seize.Title"}}</button>
+      </div>
+    </section>
+
+    <section class="runyth-order-class-assassin-1424-panel">
+      <h2>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.AuditFindings"}}</h2>
+      {{#if audit.length}}
+        <ul class="runyth-order-class-assassin-1424-findings">
+          {{#each audit}}
+            <li class="severity-{{severity}}"><strong>{{code}}</strong>: {{message}}</li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <p>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.NoFindings"}}</p>
+      {{/if}}
+    </section>
+
+    {{#if stateJson}}
+      <section class="runyth-order-class-assassin-1424-panel">
+        <h2>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.State"}}</h2>
+        <pre>{{stateJson}}</pre>
+      </section>
+    {{/if}}
+  {{else}}
+    <section class="runyth-order-class-assassin-1424-panel"><p>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.SelectActor"}}</p></section>
+  {{/if}}
+
+  {{#if lastResult}}
+    <section class="runyth-order-class-assassin-1424-panel" aria-live="polite"><h2>{{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Result"}}</h2><pre>{{lastResult}}</pre></section>
+  {{/if}}
+
+  <footer class="runyth-order-class-assassin-1424-manager__footer">
+    <button type="button" data-action="refresh"><i class="fa-solid fa-rotate"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.Refresh"}}</button>
+    <button type="button" data-action="reset-position"><i class="fa-solid fa-window-restore"></i> {{localize "RUNYTH_ORDER_CLASS_ASSASSIN_1424.Manager.ResetPosition"}}</button>
+  </footer>
+</div>

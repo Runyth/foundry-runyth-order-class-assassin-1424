@@ -1,0 +1,31 @@
+name: Compatibility report
+description: Report interaction with another Foundry module or unsupported platform version.
+title: "Compatibility: "
+labels: [compatibility]
+body:
+  - type: input
+    attributes:
+      label: Foundry VTT version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: D&D 5e version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Runyth Order version
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Other active modules
+      description: Include exact versions and identify the smallest reproducing set.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Observed interaction
+    validations:
+      required: true

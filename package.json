@@ -1,0 +1,30 @@
+{
+  "name": "runyth-order-class-assassin-1424",
+  "version": "1.0.7",
+  "private": true,
+  "type": "module",
+  "description": "Runyth Order complementary provider for the Assassin 1424 Rogue subclass.",
+  "engines": {
+    "node": ">=22.13.0 <27"
+  },
+  "scripts": {
+    "format": "node tools/format.mjs --write",
+    "format:check": "node tools/format.mjs --check",
+    "lint": "node tools/lint.mjs",
+    "test": "node --test test/*.test.mjs",
+    "validate": "node tools/validate.mjs",
+    "build": "node tools/build.mjs",
+    "package": "node tools/package.mjs",
+    "release:verify": "node tools/verify-release.mjs",
+    "check": "npm run format:check && npm run lint && npm run catalog:check && npm run content:hash:check && npm test && npm run validate && npm run build && npm run package && npm run release:verify",
+    "content:hash": "node tools/update-content-hashes.mjs --write",
+    "content:hash:check": "node tools/update-content-hashes.mjs",
+    "catalog:generate": "node tools/generate-runtime-catalog.mjs --write",
+    "catalog:check": "node tools/generate-runtime-catalog.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424.git"
+  },
+  "license": "AGPL-3.0-or-later"
+}

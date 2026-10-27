@@ -1,0 +1,77 @@
+{
+  "_key": "!items!a558000000000003",
+  "_id": "a558000000000003",
+  "name": "Poisoner’s Kit",
+  "type": "tool",
+  "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "effects": [],
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "poisoners-kit",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "toolProficiencyKey": "pois"
+      },
+      "provenance": "Runyth",
+      "contentHash": "1a012e9e81baf6d6541d4915bef9d0201d62ee22ff6134929d6836ff53429a78"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.equipment",
+        "entryId": "poisoners-kit",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.equipment.Item.a558000000000003",
+        "contentVersion": "1.0.5",
+        "checksum": "1a012e9e81baf6d6541d4915bef9d0201d62ee22ff6134929d6836ff53429a78",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>A provider-owned Poisoner’s Kit granted by Assassin’s Tools. A player-owned equivalent is preserved and satisfies synchronization.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "poisoners-kit",
+    "quantity": 1,
+    "weight": 0,
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "type": {
+      "value": "art",
+      "baseItem": "pois"
+    },
+    "ability": "int",
+    "proficient": null,
+    "bonus": "",
+    "chatFlavor": "",
+    "properties": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

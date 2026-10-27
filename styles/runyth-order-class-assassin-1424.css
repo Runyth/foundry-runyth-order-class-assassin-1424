@@ -1,0 +1,172 @@
+.runyth-order-class-assassin-1424-strike,
+.runyth-order-class-assassin-1424-sheet-control {
+  border: 1px solid color-mix(in srgb, var(--color-border-highlight, #b58b3b) 75%, #fff 25%);
+  background: color-mix(in srgb, var(--color-bg-btn, #252525) 82%, #5b1010 18%);
+  color: var(--color-text-light-highlight, #f4f1e8);
+  min-height: 2rem;
+}
+
+.runyth-order-class-assassin-1424-strike:hover,
+.runyth-order-class-assassin-1424-sheet-control:hover {
+  box-shadow: 0 0 0 1px var(--color-shadow-highlight, #c79a45) inset;
+}
+
+.runyth-order-class-assassin-1424-sheet-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-inline-start: auto;
+  align-items: center;
+  z-index: 5;
+}
+
+.runyth-order-class-assassin-1424-sheet-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: auto;
+  padding: 0.2rem 0.55rem;
+  white-space: nowrap;
+}
+
+.runyth-order-class-assassin-1424-prompt,
+.runyth-order-class-assassin-1424-chat,
+.runyth-order-class-assassin-1424-manager {
+  color: var(--color-text-light-highlight, #f4f1e8);
+}
+
+.runyth-order-class-assassin-1424-chat {
+  border-inline-start: 3px solid var(--color-border-highlight, #b58b3b);
+  padding-inline-start: 0.75rem;
+}
+
+.runyth-order-class-assassin-1424-manager__body {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  overflow: auto;
+  height: 100%;
+  background: color-mix(in srgb, var(--color-bg, #1d1d1d) 94%, #431010 6%);
+}
+
+.runyth-order-class-assassin-1424-manager__header,
+.runyth-order-class-assassin-1424-manager__footer,
+.runyth-order-class-assassin-1424-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.runyth-order-class-assassin-1424-manager__header h1,
+.runyth-order-class-assassin-1424-panel h2 {
+  margin: 0;
+}
+
+.runyth-order-class-assassin-1424-panel {
+  border: 1px solid var(--color-border-light-primary, #655b4c);
+  border-radius: 4px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, var(--color-bg-option, #272727) 92%, #300 8%);
+}
+
+.runyth-order-class-assassin-1424-panel h2 img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  vertical-align: middle;
+  border: 0;
+}
+
+.runyth-order-class-assassin-1424-actions button,
+.runyth-order-class-assassin-1424-manager__footer button {
+  flex: 1 1 12rem;
+}
+
+.runyth-order-class-assassin-1424-findings {
+  display: grid;
+  gap: 0.35rem;
+  padding-inline-start: 1.25rem;
+}
+
+.runyth-order-class-assassin-1424-findings .severity-error { color: var(--color-level-error, #ff6b6b); }
+.runyth-order-class-assassin-1424-findings .severity-warning { color: var(--color-level-warning, #ffd166); }
+.runyth-order-class-assassin-1424-findings .severity-info { color: var(--color-level-info, #8ecae6); }
+
+.runyth-order-class-assassin-1424-panel pre {
+  max-height: 15rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: #111;
+  color: #eee;
+  padding: 0.65rem;
+  border-radius: 3px;
+}
+
+.runyth-boundary {
+  border-inline-start: 3px solid #aa7f2c;
+  padding-inline-start: 0.65rem;
+}
+
+/* Patch 1.0.1: keep localized controls readable without intruding into window chrome. */
+.runyth-order-class-assassin-1424-strike,
+.runyth-order-class-assassin-1424-sheet-control,
+.runyth-order-class-assassin-1424-actions button,
+.runyth-order-class-assassin-1424-manager__footer button,
+.runyth-order-class-assassin-1424-prompt-dialog button {
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.runyth-order-class-assassin-1424-sheet-control > span,
+.runyth-order-class-assassin-1424-actions button,
+.runyth-order-class-assassin-1424-manager__footer button {
+  min-width: 0;
+}
+
+.runyth-order-class-assassin-1424-sheet-controls {
+  position: static;
+  max-width: 100%;
+  padding: 0.25rem;
+}
+
+.runyth-order-class-assassin-1424-prompt {
+  min-width: min(22rem, 75vw);
+  padding: 0.75rem;
+}
+
+.runyth-order-class-assassin-1424-prompt > :first-child,
+.runyth-order-class-assassin-1424-panel > :first-child {
+  margin-block-start: 0;
+}
+
+.runyth-order-class-assassin-1424-prompt > :last-child,
+.runyth-order-class-assassin-1424-panel > :last-child {
+  margin-block-end: 0;
+}
+
+.runyth-order-class-assassin-1424-manager__body,
+.runyth-order-class-assassin-1424-panel,
+.runyth-order-class-assassin-1424-panel pre {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.runyth-order-class-assassin-1424-manager__footer {
+  position: sticky;
+  inset-block-end: -0.8rem;
+  padding-block: 0.55rem;
+  background: color-mix(in srgb, var(--color-bg, #1d1d1d) 96%, transparent);
+}
+
+.runyth-order-class-assassin-1424-manager button[aria-busy="true"],
+.runyth-order-class-assassin-1424-sheet-control[aria-busy="true"] {
+  cursor: progress;
+  opacity: 0.72;
+}

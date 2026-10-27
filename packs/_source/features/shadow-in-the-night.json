@@ -1,0 +1,125 @@
+{
+  "_key": "!items!a554000000000013",
+  "_id": "a554000000000013",
+  "name": "Shadow in the Night",
+  "type": "feat",
+  "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "shadow-in-the-night",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "acrobaticsPrompt": true,
+        "dynamicClimb": true,
+        "damageReaction": "disappearing-act"
+      },
+      "provenance": "Runyth",
+      "contentHash": "e3c6aaa68d091d1cbe02f02c2272109dff180c129136b0e0f883ab0866be35cf"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "shadow-in-the-night",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a554000000000013",
+        "contentVersion": "1.0.5",
+        "checksum": "e3c6aaa68d091d1cbe02f02c2272109dff180c129136b0e0f883ab0866be35cf",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [
+    {
+      "_key": "!items.effects!a554000000000013.a554c11mb0000013",
+      "_id": "a554c11mb0000013",
+      "name": "Rooftop Pursuit — Dynamic Climbing Speed",
+      "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+      "origin": "Compendium.runyth-order-class-assassin-1424.features.Item.a554000000000013",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "changes": [
+        {
+          "key": "flags.runyth-order-class-assassin-1424.dynamicClimb",
+          "mode": 0,
+          "value": "walk",
+          "priority": 100000
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "flags": {
+        "runyth-order-class-assassin-1424": {
+          "schemaVersion": 2,
+          "managed": true,
+          "role": "dynamic-climb"
+        },
+        "runyth-order": {
+          "source": {
+            "schemaVersion": 1,
+            "providerId": "runyth-order-class-assassin-1424",
+            "packId": "runyth-order-class-assassin-1424.features",
+            "entryId": "shadow-in-the-night.dynamic-climb",
+            "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a554000000000013.ActiveEffect.a554c11mb0000013",
+            "contentVersion": "1.0.5",
+            "checksum": "272df7e0ae13ca4b96719936b4828c119a1214f11c7d7d0e6d7a927a5f1ba8c1",
+            "importedAt": "2026-07-27T00:00:00.000Z"
+          }
+        }
+      }
+    }
+  ],
+  "system": {
+    "description": {
+      "value": "<h2>Shadow in the Night</h2><p>You can disappear in a burst of theatrics.</p><h3>Disappearing Act</h3><p>When you take damage, you can use your Reaction to create a distraction (smoke, flash, sudden leap). You immediately take the Hide Action and can move up to half your Speed without provoking Opportunity Attacks. Once you use this ability, you can't use it again until you finish a short or long rest.</p><h3>Rooftop Pursuit</h3><p>You have Advantage on Acrobatics checks to chase or escape foes in an urban terrain. In addition, you gain a climbing speed equal to your speed.</p><p class=\"runyth-boundary\"><strong>Foundry boundary:</strong> Core Foundry records the immediate movement allowance and its no-opportunity-attack entitlement, but cannot force every third-party opportunity-attack workflow to honor it. The chat card is the authoritative table reminder.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "shadow-in-the-night",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 13
+    },
+    "properties": [],
+    "uses": {
+      "max": "",
+      "recovery": [],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

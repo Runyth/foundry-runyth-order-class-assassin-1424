@@ -1,0 +1,182 @@
+// Generated from packs/catalog.json. Run npm run catalog:generate after editing the catalog.
+export const CATALOG = Object.freeze({
+  "schemaVersion": 1,
+  "providerId": "runyth-order-class-assassin-1424",
+  "version": "1.0.5",
+  "packs": [
+    {
+      "id": "character-options",
+      "title": "Assassin 1424 Character Options",
+      "description": "Canonical character-options content for Assassin 1424.",
+      "contentKinds": [
+        "subclass"
+      ],
+      "compendia": [
+        "runyth-order-class-assassin-1424.character-options"
+      ],
+      "entries": [
+        {
+          "id": "assassin-1424",
+          "title": "Assassin 1424",
+          "kind": "subclass",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.character-options.Item.a551a551a551a551",
+          "identifier": "runyth-order-class-assassin-1424",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a551a551a551a551"
+          }
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "title": "Assassin 1424 Features",
+      "description": "Canonical feature content for Assassin 1424.",
+      "contentKinds": [
+        "feature"
+      ],
+      "compendia": [
+        "runyth-order-class-assassin-1424.features"
+      ],
+      "entries": [
+        {
+          "id": "assassinate",
+          "title": "Assassinate",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a551000000000003",
+          "identifier": "assassinate",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a551000000000003"
+          }
+        },
+        {
+          "id": "assassins-tools",
+          "title": "Assassin’s Tools",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a552000000000003",
+          "identifier": "assassins-tools",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a552000000000003"
+          }
+        },
+        {
+          "id": "infiltration-expertise",
+          "title": "Infiltration Expertise",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a553000000000009",
+          "identifier": "infiltration-expertise",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a553000000000009"
+          }
+        },
+        {
+          "id": "shadow-in-the-night",
+          "title": "Shadow in the Night",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a554000000000013",
+          "identifier": "shadow-in-the-night",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a554000000000013"
+          }
+        },
+        {
+          "id": "disappearing-act",
+          "title": "Disappearing Act",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a556000000000013",
+          "identifier": "disappearing-act",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a556000000000013"
+          }
+        },
+        {
+          "id": "seize-the-moment",
+          "title": "Seize the Moment",
+          "kind": "feature",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a555000000000017",
+          "identifier": "seize-the-moment",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a555000000000017"
+          }
+        }
+      ]
+    },
+    {
+      "id": "equipment",
+      "title": "Assassin 1424 Equipment",
+      "description": "Canonical equipment content for Assassin 1424.",
+      "contentKinds": [
+        "equipment"
+      ],
+      "compendia": [
+        "runyth-order-class-assassin-1424.equipment"
+      ],
+      "entries": [
+        {
+          "id": "disguise-kit",
+          "title": "Disguise Kit",
+          "kind": "equipment",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.equipment.Item.a557000000000003",
+          "identifier": "disguise-kit",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a557000000000003"
+          }
+        },
+        {
+          "id": "poisoners-kit",
+          "title": "Poisoner’s Kit",
+          "kind": "equipment",
+          "uuid": "Compendium.runyth-order-class-assassin-1424.equipment.Item.a558000000000003",
+          "identifier": "poisoners-kit",
+          "version": "1.0.5",
+          "tags": [
+            "rogue",
+            "assassin"
+          ],
+          "metadata": {
+            "documentId": "a558000000000003"
+          }
+        }
+      ]
+    }
+  ]
+});

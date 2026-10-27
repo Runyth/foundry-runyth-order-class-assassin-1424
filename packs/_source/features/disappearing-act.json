@@ -1,0 +1,90 @@
+{
+  "_key": "!items!a556000000000013",
+  "_id": "a556000000000013",
+  "name": "Disappearing Act",
+  "type": "feat",
+  "img": "icons/magic/air/fog-gas-smoke-swirling-gray.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "disappearing-act",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "manualAction": "disappearing-act",
+        "restRecovery": [
+          "short",
+          "long"
+        ]
+      },
+      "provenance": "Runyth",
+      "contentHash": "842e0362138260b8c2c884b11674f51c3f9c847ba903ffc84246a3a64a56ab09"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "disappearing-act",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a556000000000013",
+        "contentVersion": "1.0.5",
+        "checksum": "842e0362138260b8c2c884b11674f51c3f9c847ba903ffc84246a3a64a56ab09",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<h2>Disappearing Act</h2><p>When you take damage, you can use your Reaction to create a distraction (smoke, flash, sudden leap). You immediately take the Hide Action and can move up to half your Speed without provoking Opportunity Attacks. Once you use this ability, you can't use it again until you finish a short or long rest.</p><p>Use the actor-sheet <strong>Disappearing Act</strong> control for manual activation. Damage-triggered activation prompts the selected controlling user.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "disappearing-act",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 13
+    },
+    "properties": [],
+    "uses": {
+      "max": "1",
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        },
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

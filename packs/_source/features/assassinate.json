@@ -1,0 +1,124 @@
+{
+  "_key": "!items!a551000000000003",
+  "_id": "a551000000000003",
+  "name": "Assassinate",
+  "type": "feat",
+  "img": "icons/skills/melee/strike-dagger-skull-white.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "assassinate",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "initiativeAdvantage": true,
+        "assassinStrike": "native-critical-damage-dialog"
+      },
+      "provenance": "Runyth",
+      "contentHash": "111557d81238488d95731c9465a157f7d57153ae6fc132cb82b6e7bb31784340"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "assassinate",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a551000000000003",
+        "contentVersion": "1.0.5",
+        "checksum": "111557d81238488d95731c9465a157f7d57153ae6fc132cb82b6e7bb31784340",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [
+    {
+      "_key": "!items.effects!a551000000000003.e551000000000003",
+      "_id": "e551000000000003",
+      "name": "Assassinate — Initiative Advantage",
+      "img": "icons/skills/melee/strike-dagger-skull-white.webp",
+      "origin": "Compendium.runyth-order-class-assassin-1424.features.Item.a551000000000003",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "changes": [
+        {
+          "key": "system.attributes.init.roll.mode",
+          "mode": 2,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "flags": {
+        "runyth-order-class-assassin-1424": {
+          "schemaVersion": 2,
+          "managed": true,
+          "role": "initiative-advantage"
+        },
+        "runyth-order": {
+          "source": {
+            "schemaVersion": 1,
+            "providerId": "runyth-order-class-assassin-1424",
+            "packId": "runyth-order-class-assassin-1424.features",
+            "entryId": "assassinate.initiative-advantage",
+            "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a551000000000003.ActiveEffect.e551000000000003",
+            "contentVersion": "1.0.5",
+            "checksum": "da21750ffb44791c88424920afe219957f0583b801a97d0688b3d9064ceab294",
+            "importedAt": "2026-07-27T00:00:00.000Z"
+          }
+        }
+      }
+    }
+  ],
+  "system": {
+    "description": {
+      "value": "<h2>Assassinate</h2><p>You’re adept at ambushing a target, granting you the following benefits:</p><h3>Initiative</h3><p>You have permanent advantage on Initiative rolls.</p><h3>Assassin Strike</h3><p>You are at your deadliest when you attack a surprised enemy. Any weapon attack you score against a surprised creature is a critical hit.</p><p class=\"runyth-boundary\"><strong>Foundry workflow:</strong> Roll the weapon attack normally. When the GM confirms that the target is explicitly Surprised and the attack hits, select the standard <em>Critical Hit</em> option in the D&amp;D 5e damage dialog. This module intentionally adds no separate Assassin Strike attack button.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "assassinate",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 3
+    },
+    "properties": [],
+    "uses": {
+      "max": "",
+      "recovery": [],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

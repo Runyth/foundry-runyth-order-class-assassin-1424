@@ -1,0 +1,117 @@
+{
+  "id": "runyth-order-class-assassin-1424",
+  "title": "Runyth Order: Class Assassin 1424",
+  "description": "A D&D 5e complementary provider implementing the Assassin 1424 Rogue subclass and its supported automation.",
+  "version": "1.0.7",
+  "authors": [
+    {
+      "name": "Runyth",
+      "url": "https://github.com/Runyth"
+    }
+  ],
+  "url": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424",
+  "manifest": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/latest/download/module.json",
+  "download": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/download/v1.0.7/runyth-order-class-assassin-1424-v1.0.7.zip",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "compatibility": {
+    "minimum": "13.351",
+    "verified": "13.351",
+    "maximum": "13.351"
+  },
+  "esmodules": [
+    "src/main.mjs"
+  ],
+  "styles": [
+    "styles/runyth-order-class-assassin-1424.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "character-options",
+      "label": "Runyth Order: Class Assassin 1424 \u2014 Character Options",
+      "path": "packs/character-options-v2.db",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "subclass"
+          ]
+        }
+      }
+    },
+    {
+      "name": "features",
+      "label": "Runyth Order: Class Assassin 1424 \u2014 Features",
+      "path": "packs/features-v2.db",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "equipment",
+      "label": "Runyth Order: Class Assassin 1424 \u2014 Equipment",
+      "path": "packs/equipment-v2.db",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.3.3",
+          "verified": "5.3.3",
+          "maximum": "5.3.3"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "runyth-order",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.0.3",
+          "verified": "1.0.4"
+        }
+      }
+    ]
+  },
+  "flags": {
+    "runyth": {
+      "standard": "1.1",
+      "sourceCodeLicense": "AGPL-3.0-or-later",
+      "orderName": "Runyth Order",
+      "moduleKind": "Class",
+      "contentName": "Assassin 1424",
+      "canonicalTitle": "Runyth Order: Class Assassin 1424",
+      "legacyModuleId": "runyth-assassin"
+    }
+  }
+}

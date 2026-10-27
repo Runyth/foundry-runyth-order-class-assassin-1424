@@ -1,0 +1,75 @@
+{
+  "_key": "!items!a552000000000003",
+  "_id": "a552000000000003",
+  "name": "Assassin’s Tools",
+  "type": "feat",
+  "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "assassins-tools",
+      "contentVersion": "1.0.5",
+      "automation": {},
+      "provenance": "Runyth",
+      "contentHash": "9bf1a61ae47bb6dfefb23999595a570fdee32e1cd456cc18dcade3f87794aad0"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "assassins-tools",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a552000000000003",
+        "contentVersion": "1.0.5",
+        "checksum": "9bf1a61ae47bb6dfefb23999595a570fdee32e1cd456cc18dcade3f87794aad0",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<h2>Assassin’s Tools</h2><p>You gain a Disguise Kit and a Poisoner's Kit, and you have proficiency with them.</p><p class=\"runyth-boundary\"><strong>Automation:</strong> Advancement and actor synchronization add missing provider-owned kits and the D&amp;D 5e tool-proficiency keys <code>disg</code> and <code>pois</code> without replacing player-owned equivalents.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "assassins-tools",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 3
+    },
+    "properties": [],
+    "uses": {
+      "max": "",
+      "recovery": [],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

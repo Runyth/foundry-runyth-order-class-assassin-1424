@@ -1,0 +1,77 @@
+{
+  "_key": "!items!a553000000000009",
+  "_id": "a553000000000009",
+  "name": "Infiltration Expertise",
+  "type": "feat",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "infiltration-expertise",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "steadyAimIdentifier": "steady-aim"
+      },
+      "provenance": "Runyth",
+      "contentHash": "8221119678c1a13d2f52be0c8e57cedcce3c4e5dd6d136252b966b85aff33ab5"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "infiltration-expertise",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a553000000000009",
+        "contentVersion": "1.0.5",
+        "checksum": "8221119678c1a13d2f52be0c8e57cedcce3c4e5dd6d136252b966b85aff33ab5",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<h2>Infiltration Expertise</h2><p>You are expert at the following techniques that aid your infiltrations.</p><h3>Masterful Mimicry</h3><p>You can unerringly mimic another person's speech, handwriting, or both if you have spent at least 1 hour studying them.</p><h3>Roving Aim</h3><p>Your Speed isn't reduced to 0 by using Steady Aim.</p><p class=\"runyth-boundary\"><strong>Automation:</strong> Masterful Mimicry remains narrative. Roving Aim suppresses only the walking-speed-to-zero change originating from an activity or Item whose stable identifier is <code>steady-aim</code>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "infiltration-expertise",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 9
+    },
+    "properties": [],
+    "uses": {
+      "max": "",
+      "recovery": [],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

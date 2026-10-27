@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "required": [
+    "templates/manager.hbs",
+    "packs/catalog.json"
+  ]
+}

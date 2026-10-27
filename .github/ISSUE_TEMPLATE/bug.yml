@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible problem in Runyth Order: Class Assassin 1424.
+title: "Bug: "
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Supported environment
+      options:
+        - label: I reproduced this on Foundry VTT 13.351, D&D 5e 5.3.3, and Runyth Order 1.0.4 with API 1.0.0.
+          required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Include the Actor level, feature, Item/activity, combat state, and exact actions.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Diagnostics
+      description: Paste the Runyth Order provider diagnostics, Actor audit results, and relevant console output.

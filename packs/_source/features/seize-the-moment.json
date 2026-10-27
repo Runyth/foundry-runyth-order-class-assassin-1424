@@ -1,0 +1,90 @@
+{
+  "_key": "!items!a555000000000017",
+  "_id": "a555000000000017",
+  "name": "Seize the Moment",
+  "type": "feat",
+  "img": "icons/skills/movement/arrow-upward-yellow.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "seize-the-moment",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "manualAction": "seize-the-moment",
+        "restRecovery": [
+          "short",
+          "long"
+        ]
+      },
+      "provenance": "Runyth",
+      "contentHash": "a4d058775aa9b6f766b0367601d645bc5ea925c8c95d50480ffdd36382b727cd"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.features",
+        "entryId": "seize-the-moment",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.features.Item.a555000000000017",
+        "contentVersion": "1.0.5",
+        "checksum": "a4d058775aa9b6f766b0367601d645bc5ea925c8c95d50480ffdd36382b727cd",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<h2>Seize the Moment</h2><p>At the beginning of your turn, you can choose to take advantage of the current battle state and seize the moment. If you choose to seize the moment, you gain a second action that you can take this turn, which can only be used for the Attack action. In addition, you can use Sneak Attack twice, instead of once, on this turn. Once you use this feature, you can't use it again until you finish a short or long rest.</p><p class=\"runyth-boundary\"><strong>Foundry boundary:</strong> The module creates a turn-scoped entitlement, authorizes exactly one additional Sneak Attack, rejects a third, and posts clear guidance. Foundry core does not expose a universal action-economy enforcement API, so the extra Attack-only action is represented rather than silently enforced.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "seize-the-moment",
+    "type": {
+      "value": "class",
+      "subtype": "rogue"
+    },
+    "prerequisites": {
+      "level": 17
+    },
+    "properties": [],
+    "uses": {
+      "max": "1",
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        },
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ],
+      "spent": 0
+    },
+    "activities": {},
+    "advancement": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}

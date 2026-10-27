@@ -1,0 +1,77 @@
+{
+  "_key": "!items!a557000000000003",
+  "_id": "a557000000000003",
+  "name": "Disguise Kit",
+  "type": "tool",
+  "img": "icons/commodities/cloth/cloth-bolt-grey.webp",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "effects": [],
+  "flags": {
+    "runyth-order-class-assassin-1424": {
+      "schemaVersion": 2,
+      "managed": true,
+      "entryId": "disguise-kit",
+      "contentVersion": "1.0.5",
+      "automation": {
+        "toolProficiencyKey": "disg"
+      },
+      "provenance": "Runyth",
+      "contentHash": "b59583765d63c7a818709c4bafbfdd7b2957dd0eb65ec4a87b3e4498eaf9ea91"
+    },
+    "runyth-order": {
+      "source": {
+        "schemaVersion": 1,
+        "providerId": "runyth-order-class-assassin-1424",
+        "packId": "runyth-order-class-assassin-1424.equipment",
+        "entryId": "disguise-kit",
+        "sourceUuid": "Compendium.runyth-order-class-assassin-1424.equipment.Item.a557000000000003",
+        "contentVersion": "1.0.5",
+        "checksum": "b59583765d63c7a818709c4bafbfdd7b2957dd0eb65ec4a87b3e4498eaf9ea91",
+        "importedAt": "2026-07-27T00:00:00.000Z"
+      }
+    }
+  },
+  "system": {
+    "description": {
+      "value": "<p>A provider-owned Disguise Kit granted by Assassin’s Tools. A player-owned equivalent is preserved and satisfies synchronization.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Runyth",
+      "book": "Runyth Order",
+      "page": "",
+      "license": "AGPL-3.0-or-later",
+      "rules": "2024"
+    },
+    "identifier": "disguise-kit",
+    "quantity": 1,
+    "weight": 0,
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "type": {
+      "value": "art",
+      "baseItem": "disg"
+    },
+    "ability": "cha",
+    "proficient": null,
+    "bonus": "",
+    "chatFlavor": "",
+    "properties": []
+  },
+  "_stats": {
+    "duplicateSource": null,
+    "coreVersion": "13.351",
+    "systemId": "dnd5e",
+    "systemVersion": "5.3.3",
+    "createdTime": 0,
+    "modifiedTime": 0,
+    "lastModifiedBy": "runythbuilder0000",
+    "exportSource": null
+  }
+}
