@@ -73,7 +73,7 @@ Do not enable the legacy and current Assassin module identities simultaneously.
 ## Build and verification
 
 ```text
-npm ci
+npm ci --ignore-scripts
 npm run catalog:check
 npm test
 npm run build

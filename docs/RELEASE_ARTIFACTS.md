@@ -14,6 +14,8 @@ It can be extracted into Foundry's `Data/modules/` directory.
 
 ## Source ZIP
 
+The source ZIP includes reconstructed, credential-free Git metadata when it is built from a committed revision. It is not a copy of a developer `.git` directory.
+
 Contains editable runtime source, canonical pack JSON, deterministic compendium tooling, tests, CI, documentation, templates, styles, declarations, lockfile, and release tooling. It reproduces the installable archive.
 
 ## Documentation ZIP
