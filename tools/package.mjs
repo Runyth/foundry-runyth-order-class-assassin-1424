@@ -8,6 +8,7 @@ import { createZip, listZip } from "./lib/zip.mjs";
 import { validateRuntimeArchiveEntries, validateRuntimeTree } from "./lib/runtime-assets.mjs";
 import { createDocumentationBundle } from "./documentation-bundle.mjs";
 import { isExcludedSourcePath, readJson, walk } from "./lib/files.mjs";
+import { materializePublicationSource } from "./lib/publication-source.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
@@ -36,7 +37,11 @@ if (JSON.stringify(runtimeManifest) !== JSON.stringify(manifest)) {
 }
 const runtimeAssetValidation = await validateRuntimeTree({ runtimeRoot, manifest: runtimeManifest, projectRoot: root });
 const buildManifest = await readJson(resolve(root, ".build/build-manifest.json"));
-const sourceFiles = (await walk(root)).filter((file) => !isExcludedSourcePath(file.path) && !file.path.startsWith(".build/") && !file.path.startsWith("dist/"));
+const publication = await materializePublicationSource(root);
+const sourceFiles = (await walk(publication.root)).filter((file) => {
+  if (file.path.startsWith(".git/")) return publication.includeGit;
+  return !isExcludedSourcePath(file.path) && !file.path.startsWith(".build/") && !file.path.startsWith("dist/");
+});
 const sourceRoot = `${moduleId}-source-v${version}`;
 await createZip(resolve(dist, installName), runtimeFiles.map((file) => ({ path: file.absolute, name: `${moduleId}/${file.path}` })));
 validateRuntimeArchiveEntries({
@@ -79,6 +84,9 @@ const report = {
   runtimeStrategy: "Single generated browser ES module shipped at the exact manifest path src/main.mjs; all manifest-declared and discovered runtime assets are validated before and after ZIP creation",
   packFormat: "Deterministic NeDB source packs on v2 paths; Foundry V13 migrates them to LevelDB",
   liveFoundryValidationPerformed: false,
+  publicationSource: publication.mode,
+  publicationGit: publication.includeGit,
+  publicationRevision: publication.report?.revisionSha ?? null,
 };
 await writeFile(resolve(dist, `${moduleId}-v${version}-build-report.json`), `${JSON.stringify(report, null, 2)}\n`);
 await writeFile(resolve(dist, checksumName), [

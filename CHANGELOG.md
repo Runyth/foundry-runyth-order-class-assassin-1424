@@ -12,7 +12,7 @@
 - Preserved the single-file runtime strategy from 1.0.6, so no secondary editable ES-module fetches are reintroduced.
 - Preserved canonical content version `1.0.5`; this patch changes packaging and runtime integrity only and requires no new content migration.
 - Licensed the module as `AGPL-3.0-or-later`.
-- Removed an incorrect private-campaign attribution from public metadata and compendium citations. The subclass is Runyth-owned. Canonical content hashes were regenerated; feature behaviour is unchanged.
+- Corrected public content citations to Runyth. Canonical content hashes were regenerated; feature behaviour is unchanged.
 - Pointed the public repository, manifest, and download URLs at `foundry-runyth-order-class-assassin-1424`.
 
 ## 1.0.6 — 2026-08-12

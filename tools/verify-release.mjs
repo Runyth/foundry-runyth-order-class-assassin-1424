@@ -8,6 +8,8 @@ import { createDocumentationBundle } from "./documentation-bundle.mjs";
 import { extractZip, listZip } from "./lib/zip.mjs";
 import { validateRuntimeArchiveEntries } from "./lib/runtime-assets.mjs";
 import { readJson } from "./lib/files.mjs";
+import { scanTree } from "./lib/publication-scan.mjs";
+import { RECONSTRUCTED_CONFIG } from "./stage-source.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
@@ -86,6 +88,7 @@ const documentationRoot = `${manifest.id}-documentation-v${manifest.version}`;
 
 for (const required of [
   `${manifest.id}/module.json`,
+  `${manifest.id}/LICENSE`,
   `${manifest.id}/src/main.mjs`,
   `${manifest.id}/packs/character-options-v2.db`,
   `${manifest.id}/packs/features-v2.db`,
@@ -95,6 +98,8 @@ for (const required of [
 }
 
 for (const forbidden of [
+  `${manifest.id}/NOTICE.md`,
+  `${sourceRoot}/NOTICE.md`,
   `${manifest.id}/src/automation/assassinate.mjs`,
   `${manifest.id}/src/rules/assassin-strike-state.mjs`,
 ]) {
@@ -153,6 +158,22 @@ for (const required of [
   if (!documentationEntriesInitial.includes(required)) {
     failures.push(`Initial documentation archive is missing ${required}.`);
   }
+}
+
+const scanRoot = resolve(root, ".build/publication-scan");
+await rm(scanRoot, { recursive: true, force: true });
+await mkdir(scanRoot, { recursive: true });
+await extractZip(installPath, resolve(scanRoot, "install"));
+await extractZip(sourcePath, resolve(scanRoot, "source"));
+for (const finding of await scanTree(resolve(scanRoot, "install", manifest.id))) failures.push(`Install archive prohibited content: ${finding}`);
+for (const finding of await scanTree(resolve(scanRoot, "source", sourceRoot), { includeGit: true })) failures.push(`Source archive prohibited content: ${finding}`);
+const stagedConfigPath = resolve(scanRoot, "source", sourceRoot, ".git/config");
+if (sourceEntries.includes(`${sourceRoot}/.git/config`)) {
+  const stagedConfig = await readFile(stagedConfigPath, "utf8");
+  if (stagedConfig !== RECONSTRUCTED_CONFIG) failures.push("Reconstructed Git config is not the closed credential-free config.");
+  if (sourceEntries.some((entry) => entry.includes("/.git/hooks/"))) failures.push("Source archive contains Git hooks.");
+} else if (process.env.RUNYTH_PUBLIC_RELEASE) {
+  failures.push("Public source archive must contain reconstructed Git metadata.");
 }
 
 const secondPackage = run("npm", ["run", "package"]);

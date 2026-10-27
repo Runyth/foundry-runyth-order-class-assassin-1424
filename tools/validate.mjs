@@ -6,6 +6,7 @@ import { canonicalContentHash, embeddedEffectHash } from "./lib/content-hash.mjs
 import { renderRuntimeCatalog } from "./lib/runtime-catalog.mjs";
 import { collectManifestRuntimeAssets } from "./lib/runtime-assets.mjs";
 import { readJson, walk } from "./lib/files.mjs";
+import { scanTree } from "./lib/publication-scan.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const failures = [];
@@ -23,6 +24,14 @@ const files = new Set(allFiles.map((file) => file.path));
 if (manifest.id !== "runyth-order-class-assassin-1424") failures.push("Module ID must be runyth-order-class-assassin-1424.");
 if (manifest.title !== "Runyth Order: Class Assassin 1424") failures.push("Display title changed.");
 if (manifest.flags?.runyth?.orderName !== "Runyth Order" || manifest.flags?.runyth?.moduleKind !== "Class" || manifest.flags?.runyth?.contentName !== "Assassin 1424" || manifest.flags?.runyth?.canonicalTitle !== manifest.title) failures.push("Runyth Order naming metadata is invalid.");
+if (packageJson.license !== "AGPL-3.0-or-later" || packageLock.packages?.[""]?.license !== "AGPL-3.0-or-later") failures.push("Project licence must be AGPL-3.0-or-later.");
+if (manifest.flags?.runyth?.sourceCodeLicense !== "AGPL-3.0-or-later") failures.push("Manifest source licence must be AGPL-3.0-or-later.");
+if (manifest.flags?.runyth?.privateContent) failures.push("Manifest must not mark the module as private content.");
+if (!manifest.url?.startsWith("https://github.com/Runyth/foundry-runyth-order-class-assassin-1424")) failures.push("Manifest URL must use the public foundry- repository.");
+if (files.has("NOTICE.md")) failures.push("NOTICE.md must not be published.");
+const licenseText = await readFile(resolve(root, "LICENSE"), "utf8");
+if (!licenseText.includes("GNU AFFERO GENERAL PUBLIC LICENSE")) failures.push("LICENSE must contain the GNU AGPL text.");
+for (const finding of await scanTree(root)) failures.push(`Prohibited publication content: ${finding}`);
 if (manifest.version !== packageJson.version) failures.push("Manifest and package versions differ.");
 if (packageLock.version !== packageJson.version || packageLock.packages?.[""]?.version !== packageJson.version) failures.push("Package-lock version differs from package version.");
 if (!/^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/u.test(manifest.version)) failures.push(`Invalid semantic module version ${manifest.version}.`);

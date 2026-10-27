@@ -8,7 +8,7 @@ const root = resolve(import.meta.dirname, "..");
 const failures = [];
 for (const file of await walk(root)) {
   if (![".mjs", ".js"].includes(extname(file.path))) continue;
-  if (file.path.startsWith("dist/") || file.path.startsWith(".build/")) continue;
+  if (file.path.startsWith("dist/") || file.path.startsWith(".build/") || file.path.startsWith(".staging/") || file.path.startsWith(".git/")) continue;
   const text = await readFile(file.absolute, "utf8");
   if (/\t/u.test(text)) failures.push(`${file.path}: tab indentation is not allowed.`);
   if (/ +$/gmu.test(text)) failures.push(`${file.path}: trailing whitespace.`);
