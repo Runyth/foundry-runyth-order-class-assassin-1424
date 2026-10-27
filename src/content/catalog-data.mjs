@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
 // Generated from packs/catalog.json. Run npm run catalog:generate after editing the catalog.
 export const CATALOG = Object.freeze({
   "schemaVersion": 1,
