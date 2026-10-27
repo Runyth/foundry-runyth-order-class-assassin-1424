@@ -1,6 +1,5 @@
 # Release process
 
-
 Public release source archives are produced only by the public CI workflow. That workflow reconstructs credential-free Git metadata and does not persist checkout credentials. Do not publish a developer checkout or a locally built source ZIP.
 
 The repository produces three deterministic ZIP archives for version 1.0.7:
@@ -12,7 +11,7 @@ The repository produces three deterministic ZIP archives for version 1.0.7:
 Run:
 
 ```text
-npm ci
+npm ci --ignore-scripts
 npm run format:check
 npm run lint
 npm run catalog:check
