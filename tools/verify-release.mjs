@@ -188,13 +188,13 @@ await mkdir(freshRoot, { recursive: true });
 await extractZip(sourcePath, freshRoot);
 const extracted = resolve(freshRoot, sourceRoot);
 const freshSections = [];
-for (const [label, command, args] of [
+for (const [label, command, args, env] of [
   ["fresh npm ci", "npm", ["ci", "--ignore-scripts"]],
   ["fresh tests", "npm", ["test"]],
   ["fresh validation", "npm", ["run", "validate"]],
   ["fresh build", "npm", ["run", "build"]],
-  ["fresh package", "npm", ["run", "package"]],
-]) requireSuccess(label, run(command, args, extracted), freshSections);
+  ["fresh package", "npm", ["run", "package"], { RUNYTH_ALLOW_UNCOMMITTED: "1" }],
+]) requireSuccess(label, run(command, args, extracted, env), freshSections);
 
 const freshInstall = resolve(extracted, "dist", installName);
 const freshSource = resolve(extracted, "dist", sourceName);
