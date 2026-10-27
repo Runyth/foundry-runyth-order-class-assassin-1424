@@ -7,6 +7,7 @@ import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { prohibitedMatches, scanTree } from "../tools/lib/publication-scan.mjs";
+import { verifyCommitSignatures } from "../tools/lib/release-signatures.mjs";
 import { RECONSTRUCTED_CONFIG, stageSource } from "../tools/stage-source.mjs";
 
 const root = resolve(import.meta.dirname, "..");
@@ -17,6 +18,10 @@ test("publication scan accepts the project tree and rejects credential canaries"
   assert.ok(prohibitedMatches(token).includes("classic platform access token"));
   assert.ok(prohibitedMatches("Play" + "er 1").includes("removed attribution rumour"));
   assert.ok(prohibitedMatches(["priv", "ate ", "camp", "aign"].join("")).includes("removed attribution rumour"));
+});
+
+test("published release key verifies the repository history", async () => {
+  assert.deepEqual(await verifyCommitSignatures(root, resolve(root, "keys/release-signing.asc")), []);
 });
 
 test("source staging reconstructs a credential-free Git repository", async () => {

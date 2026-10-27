@@ -10,6 +10,7 @@ import { validateRuntimeArchiveEntries } from "./lib/runtime-assets.mjs";
 import { readJson } from "./lib/files.mjs";
 import { scanTree } from "./lib/publication-scan.mjs";
 import { RECONSTRUCTED_CONFIG } from "./stage-source.mjs";
+import { verifyCommitSignatures } from "./lib/release-signatures.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
@@ -175,6 +176,9 @@ if (sourceEntries.includes(`${sourceRoot}/.git/config`)) {
 } else if (process.env.RUNYTH_PUBLIC_RELEASE) {
   failures.push("Public source archive must contain reconstructed Git metadata.");
 }
+if (sourceEntries.includes(`${sourceRoot}/.git/config`)) {
+  failures.push(...await verifyCommitSignatures(resolve(scanRoot, "source", sourceRoot), resolve(root, "keys/release-signing.asc")));
+}
 
 const secondPackage = run("npm", ["run", "package"]);
 requireSuccess("second deterministic package", secondPackage);
@@ -277,7 +281,7 @@ ${failures.length ? "Automated release verification failed." : "All automated re
 
 ## Verified automatically
 
-- clean dependency installation with \`npm ci\`;
+- clean dependency installation with \`npm ci --ignore-scripts\`;
 - unit and contract tests;
 - formatting and lint checks;
 - manifest, localization, source metadata, Advancement, UUID, and API scans;

@@ -16,4 +16,4 @@ The newest `1.x` release receives security fixes. Compatibility is limited to th
 
 This module is installed code. Foundry executes it with the permissions available to the logged-in client. It does not fetch remote executable content, evaluate descriptor strings as JavaScript, or store credentials.
 
-Release source archives must contain only reconstructed, credential-free Git metadata. Do not publish a developer checkout, a private key, or a local Git configuration.
+Release source archives must contain only reconstructed, credential-free Git metadata. Do not publish a developer checkout, a private key, or a local Git configuration. Archived commits must verify with the published key in `keys/release-signing.asc`.
