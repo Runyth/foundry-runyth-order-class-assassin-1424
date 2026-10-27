@@ -3,6 +3,9 @@ description: Report interaction with another Foundry module or unsupported platf
 title: "Compatibility: "
 labels: [compatibility]
 body:
+  - type: markdown
+    attributes:
+      value: Do not attach credentials, private world exports, or player information.
   - type: input
     attributes:
       label: Foundry VTT version

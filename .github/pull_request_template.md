@@ -4,7 +4,7 @@ Describe the behavior and why it belongs in this complementary provider.
 
 ## Validation
 
-- [ ] `npm ci`
+- [ ] `npm ci --ignore-scripts`
 - [ ] `npm run format:check`
 - [ ] `npm run lint`
 - [ ] `npm test`

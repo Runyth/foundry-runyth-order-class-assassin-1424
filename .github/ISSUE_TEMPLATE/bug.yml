@@ -1,18 +1,21 @@
 name: Bug report
-description: Report a reproducible problem in Runyth Order: Class Assassin 1424.
+description: "Report a reproducible problem in Runyth Order: Class Assassin 1424."
 title: "Bug: "
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: Do not attach credentials, private world exports, or player information.
   - type: checkboxes
     attributes:
       label: Supported environment
       options:
-        - label: I reproduced this on Foundry VTT 13.351, D&D 5e 5.3.3, and Runyth Order 1.0.4 with API 1.0.0.
+        - label: I reproduced this on Foundry VTT 13.351, D&D 5e 5.3.3, and Runyth Order with API 1.0.0.
           required: true
   - type: textarea
     attributes:
       label: Reproduction steps
-      description: Include the Actor level, feature, Item/activity, combat state, and exact actions.
+      description: Include the Actor level, feature, Item/activity, combat state, and exact actions. Do not include world exports or access tokens.
     validations:
       required: true
   - type: textarea
@@ -28,4 +31,4 @@ body:
   - type: textarea
     attributes:
       label: Diagnostics
-      description: Paste the Runyth Order provider diagnostics, Actor audit results, and relevant console output.
+      description: Paste reviewed provider diagnostics and relevant console output. Remove player names and filesystem paths first.
