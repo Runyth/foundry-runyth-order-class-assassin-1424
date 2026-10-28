@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 // Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+import { existsSync } from "node:fs";
 import { spawnSync } from "node:child_process";
+import { resolve } from "node:path";
 import { stageSource } from "../stage-source.mjs";
 import { isolatedGitEnv } from "./git-env.mjs";
 
@@ -20,6 +22,15 @@ export async function materializePublicationSource(root) {
       throw new Error("Public release requires a committed revision.");
     }
     return { mode: "worktree", root, includeGit: false, report: null };
+  }
+  if (!existsSync(resolve(root, ".git/index"))) {
+    const restored = spawnSync("git", ["-C", root, "read-tree", "HEAD"], {
+      encoding: "utf8",
+      env: isolatedGitEnv(),
+    });
+    if (restored.status !== 0) {
+      throw new Error(`Cannot restore the Git index before publication staging: ${restored.stderr.trim()}`);
+    }
   }
   const dirty = gitText(root, ["status", "--porcelain", "--untracked-files=no"]);
   if (dirty && process.env.RUNYTH_PUBLIC_RELEASE) {

@@ -197,7 +197,7 @@ for (const [label, command, args, env] of [
   ["fresh tests", "npm", ["test"]],
   ["fresh validation", "npm", ["run", "validate"]],
   ["fresh build", "npm", ["run", "build"]],
-  ["fresh package", "npm", ["run", "package"], { RUNYTH_ALLOW_UNCOMMITTED: "1" }],
+  ["fresh package", "npm", ["run", "package"]],
 ]) requireSuccess(label, run(command, args, extracted, env), freshSections);
 
 const freshInstall = resolve(extracted, "dist", installName);

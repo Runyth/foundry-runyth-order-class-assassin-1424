@@ -6,6 +6,7 @@ import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
+import { materializePublicationSource } from "../tools/lib/publication-source.mjs";
 import { prohibitedMatches, scanTree } from "../tools/lib/publication-scan.mjs";
 import { verifyCommitSignatures } from "../tools/lib/release-signatures.mjs";
 import { RECONSTRUCTED_CONFIG, stageSource } from "../tools/stage-source.mjs";
@@ -49,6 +50,7 @@ test("source staging reconstructs a credential-free Git repository", async () =>
     await writeFile(resolve(temp, "README.md"), "fixture\n");
     git(["add", "README.md"]);
     git(["commit", "--quiet", "-m", "Fixture: Add publication staging sample"]);
+    git(["tag", "v9.9.9"]);
     const savedRelease = process.env.RUNYTH_PUBLIC_RELEASE;
     const savedRef = process.env.RUNYTH_RELEASE_REF;
     process.env.RUNYTH_PUBLIC_RELEASE = "1";
@@ -66,6 +68,18 @@ test("source staging reconstructs a credential-free Git repository", async () =>
     assert.equal(config, RECONSTRUCTED_CONFIG);
     assert.equal(staged.report.closureObjectCount > 0, true);
     await assert.rejects(readFile(resolve(staged.root, ".git/hooks/pre-commit")));
+    process.env.RUNYTH_PUBLIC_RELEASE = "1";
+    process.env.RUNYTH_RELEASE_REF = "refs/tags/v9.9.9";
+    try {
+      const republished = await materializePublicationSource(staged.root);
+      assert.equal(republished.includeGit, true);
+      assert.equal(republished.report.releaseTag, "refs/tags/v9.9.9");
+    } finally {
+      if (savedRelease === undefined) delete process.env.RUNYTH_PUBLIC_RELEASE;
+      else process.env.RUNYTH_PUBLIC_RELEASE = savedRelease;
+      if (savedRef === undefined) delete process.env.RUNYTH_RELEASE_REF;
+      else process.env.RUNYTH_RELEASE_REF = savedRef;
+    }
   } finally {
     await rm(temp, { recursive: true, force: true });
   }
