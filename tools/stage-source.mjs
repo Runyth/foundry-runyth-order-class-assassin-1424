@@ -181,7 +181,7 @@ export async function stageSource(root, options = {}) {
   if (!revisionSha) throw new Error(`Cannot resolve staging revision ${revisionRequest}.`);
 
   let releaseTag = null;
-  if (process.env.RUNYTH_PUBLIC_RELEASE) {
+  if (!options.revision && process.env.RUNYTH_PUBLIC_RELEASE) {
     if (!RELEASE_TAG_PATTERN.test(revisionRequest)) {
       throw new Error(`Public release builds must select their version tag (got ${revisionRequest}).`);
     }

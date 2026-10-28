@@ -49,7 +49,19 @@ test("source staging reconstructs a credential-free Git repository", async () =>
     await writeFile(resolve(temp, "README.md"), "fixture\n");
     git(["add", "README.md"]);
     git(["commit", "--quiet", "-m", "Fixture: Add publication staging sample"]);
-    const staged = await stageSource(temp, { stagingRoot: resolve(temp, ".staging") });
+    const savedRelease = process.env.RUNYTH_PUBLIC_RELEASE;
+    const savedRef = process.env.RUNYTH_RELEASE_REF;
+    process.env.RUNYTH_PUBLIC_RELEASE = "1";
+    process.env.RUNYTH_RELEASE_REF = "refs/tags/v1.0.7";
+    let staged;
+    try {
+      staged = await stageSource(temp, { stagingRoot: resolve(temp, ".staging"), revision: "HEAD" });
+    } finally {
+      if (savedRelease === undefined) delete process.env.RUNYTH_PUBLIC_RELEASE;
+      else process.env.RUNYTH_PUBLIC_RELEASE = savedRelease;
+      if (savedRef === undefined) delete process.env.RUNYTH_RELEASE_REF;
+      else process.env.RUNYTH_RELEASE_REF = savedRef;
+    }
     const config = await readFile(resolve(staged.root, ".git/config"), "utf8");
     assert.equal(config, RECONSTRUCTED_CONFIG);
     assert.equal(staged.report.closureObjectCount > 0, true);
