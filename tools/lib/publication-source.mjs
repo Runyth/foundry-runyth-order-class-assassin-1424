@@ -32,15 +32,13 @@ export async function materializePublicationSource(root) {
       throw new Error(`Cannot restore the Git index before publication staging: ${restored.stderr.trim()}`);
     }
   }
-  const dirty = gitText(root, ["status", "--porcelain", "--untracked-files=no"]);
+  const dirty = gitText(root, ["-c", "core.filemode=false", "status", "--porcelain", "--untracked-files=no"]);
   if (dirty && process.env.RUNYTH_PUBLIC_RELEASE) {
     throw new Error("Public release rejects uncommitted tracked changes.");
   }
   if (dirty && !process.env.RUNYTH_ALLOW_UNCOMMITTED) {
     throw new Error("Tracked uncommitted changes cannot enter a publication archive.");
   }
-  // A reconstructed archive has no index, so status reports deletions even when the
-  // extracted tree matches HEAD. Staging still uses the recorded revision, not the index.
   const staged = await stageSource(root);
   return {
     mode: "staged",
