@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.8 — 2026-10-31
+
+- Renamed the release archives to `runyth-order-class-assassin-1424-v1.0.8-mod.zip`, `-src.zip`, and `-doc.zip`.
+- Pointed the Foundry download URL at the `-mod` archive.
+- Preserved canonical content version `1.0.5`. This patch changes release artifact names only and requires no content migration.
+
 ## 1.0.7 — 2026-08-18
 
 - Fixed the install/runtime manifest mismatch reported as an HTTP 404 for `modules/runyth-order-class-assassin-1424/src/main.mjs`.

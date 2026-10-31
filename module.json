@@ -2,7 +2,7 @@
   "id": "runyth-order-class-assassin-1424",
   "title": "Runyth Order: Class Assassin 1424",
   "description": "A D&D 5e complementary provider implementing the Assassin 1424 Rogue subclass and its supported automation.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "authors": [
     {
       "name": "Runyth",
@@ -11,7 +11,7 @@
   ],
   "url": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424",
   "manifest": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/latest/download/module.json",
-  "download": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/download/v1.0.7/runyth-order-class-assassin-1424-v1.0.7.zip",
+  "download": "https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/download/v1.0.8/runyth-order-class-assassin-1424-v1.0.8-mod.zip",
   "license": "LICENSE",
   "readme": "README.md",
   "changelog": "CHANGELOG.md",

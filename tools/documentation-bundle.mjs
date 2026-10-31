@@ -17,8 +17,8 @@ export async function createDocumentationBundle({
 } = {}) {
   const manifest = await readJson(resolve(root, "module.json"));
   const prefix = `${manifest.id}-v${manifest.version}`;
-  const archiveName = `${manifest.id}-documentation-v${manifest.version}.zip`;
-  const archiveRoot = `${manifest.id}-documentation-v${manifest.version}`;
+  const archiveName = `${prefix}-doc.zip`;
+  const archiveRoot = `${prefix}-doc`;
   const entries = [];
 
   for (const name of [

@@ -12,7 +12,7 @@ The foundation dependency is the Foundry module `runyth-order`, exposing public 
 | Module ID | `runyth-order-class-assassin-1424` |
 | Provider ID | `runyth-order-class-assassin-1424` |
 | Subclass identifier | `runyth-order-class-assassin-1424` |
-| Release version | `1.0.7` |
+| Release version | `1.0.8` |
 | Canonical content version | `1.0.5` |
 
 See [Runyth Order naming scheme](docs/RUNYTH_ORDER_NAMING.md).

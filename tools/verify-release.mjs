@@ -17,9 +17,9 @@ const dist = resolve(root, "dist");
 const manifest = await readJson(resolve(root, "module.json"));
 const catalog = await readJson(resolve(root, "packs/catalog.json"));
 const prefix = `${manifest.id}-v${manifest.version}`;
-const installName = `${prefix}.zip`;
-const sourceName = `${manifest.id}-source-v${manifest.version}.zip`;
-const documentationName = `${manifest.id}-documentation-v${manifest.version}.zip`;
+const installName = `${prefix}-mod.zip`;
+const sourceName = `${prefix}-src.zip`;
+const documentationName = `${prefix}-doc.zip`;
 const installPath = resolve(dist, installName);
 const sourcePath = resolve(dist, sourceName);
 const documentationPath = resolve(dist, documentationName);
@@ -84,8 +84,8 @@ try {
 } catch (error) {
   failures.push(error instanceof Error ? error.message : String(error));
 }
-const sourceRoot = `${manifest.id}-source-v${manifest.version}`;
-const documentationRoot = `${manifest.id}-documentation-v${manifest.version}`;
+const sourceRoot = `${prefix}-src`;
+const documentationRoot = `${prefix}-doc`;
 
 for (const required of [
   `${manifest.id}/module.json`,

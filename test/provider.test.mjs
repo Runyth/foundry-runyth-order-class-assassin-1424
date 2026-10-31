@@ -13,7 +13,7 @@ test("provider registration identity and compatibility are exact", () => {
   assert.equal(provider.id, "runyth-order-class-assassin-1424");
   assert.equal(provider.moduleId, "runyth-order-class-assassin-1424");
   assert.equal(provider.title, "Runyth Order: Class Assassin 1424");
-  assert.equal(provider.version, "1.0.7");
+  assert.equal(provider.version, "1.0.8");
   assert.equal(provider.metadata.namingSchemeVersion, "1.1");
   assert.equal(provider.metadata.orderName, "Runyth Order");
   assert.equal(provider.metadata.moduleKind, "Class");

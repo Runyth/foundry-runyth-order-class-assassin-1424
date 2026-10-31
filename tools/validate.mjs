@@ -28,6 +28,7 @@ if (packageJson.license !== "AGPL-3.0-or-later" || packageLock.packages?.[""]?.l
 if (manifest.flags?.runyth?.sourceCodeLicense !== "AGPL-3.0-or-later") failures.push("Manifest source licence must be AGPL-3.0-or-later.");
 if (manifest.flags?.runyth?.privateContent) failures.push("Manifest must not mark the module as private content.");
 if (!manifest.url?.startsWith("https://github.com/Runyth/foundry-runyth-order-class-assassin-1424")) failures.push("Manifest URL must use the public foundry- repository.");
+if (manifest.download !== `https://github.com/Runyth/foundry-runyth-order-class-assassin-1424/releases/download/v${manifest.version}/${manifest.id}-v${manifest.version}-mod.zip`) failures.push("Manifest download URL must name the -mod release archive.");
 if (files.has("NOTICE.md")) failures.push("NOTICE.md must not be published.");
 const licenseText = await readFile(resolve(root, "LICENSE"), "utf8");
 if (!licenseText.includes("GNU AFFERO GENERAL PUBLIC LICENSE")) failures.push("LICENSE must contain the GNU AGPL text.");

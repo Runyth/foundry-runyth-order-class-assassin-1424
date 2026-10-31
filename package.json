@@ -1,6 +1,6 @@
 {
   "name": "runyth-order-class-assassin-1424",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
   "type": "module",
   "description": "Runyth Order complementary provider for the Assassin 1424 Rogue subclass.",

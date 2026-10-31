@@ -22,7 +22,7 @@ function combat(turn) {
 }
 
 test("patch advances canonical content while retaining the identity migration", async () => {
-  assert.equal(MODULE_VERSION, "1.0.7");
+  assert.equal(MODULE_VERSION, "1.0.8");
   assert.equal(CONTENT_VERSION, "1.0.5");
   const catalog = JSON.parse(await readFile(resolve(root, "packs/catalog.json"), "utf8"));
   assert.equal(catalog.version, CONTENT_VERSION);

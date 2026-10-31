@@ -2,11 +2,11 @@
 
 Public release source archives are produced only by the public CI workflow. That workflow reconstructs credential-free Git metadata and does not persist checkout credentials. Do not publish a developer checkout or a locally built source ZIP.
 
-The repository produces three deterministic ZIP archives for version 1.0.7:
+The repository produces three deterministic ZIP archives:
 
-1. `runyth-order-class-assassin-1424-v1.0.7.zip`;
-2. `runyth-order-class-assassin-1424-source-v1.0.7.zip`;
-3. `runyth-order-class-assassin-1424-documentation-v1.0.7.zip`.
+1. `runyth-order-class-assassin-1424-v<version>-mod.zip`;
+2. `runyth-order-class-assassin-1424-v<version>-src.zip`;
+3. `runyth-order-class-assassin-1424-v<version>-doc.zip`.
 
 Run:
 

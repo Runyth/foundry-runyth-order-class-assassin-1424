@@ -61,9 +61,9 @@ jobs:
         with:
           generate_release_notes: true
           files: |
-            dist/runyth-order-class-assassin-1424-v*.zip
-            dist/runyth-order-class-assassin-1424-source-v*.zip
-            dist/runyth-order-class-assassin-1424-documentation-v*.zip
+            dist/runyth-order-class-assassin-1424-v*-mod.zip
+            dist/runyth-order-class-assassin-1424-v*-src.zip
+            dist/runyth-order-class-assassin-1424-v*-doc.zip
             dist/runyth-order-class-assassin-1424-v*-SHA256SUMS.txt
             dist/runyth-order-class-assassin-1424-v*-build-report.json
             module.json

@@ -16,9 +16,9 @@ const manifest = await readJson(resolve(root, "module.json"));
 const catalog = await readJson(resolve(root, "packs/catalog.json"));
 const moduleId = manifest.id;
 const version = manifest.version;
-const installName = `${moduleId}-v${version}.zip`;
-const sourceName = `${moduleId}-source-v${version}.zip`;
-const documentationName = `${moduleId}-documentation-v${version}.zip`;
+const installName = `${moduleId}-v${version}-mod.zip`;
+const sourceName = `${moduleId}-v${version}-src.zip`;
+const documentationName = `${moduleId}-v${version}-doc.zip`;
 const checksumName = `${moduleId}-v${version}-SHA256SUMS.txt`;
 const buildResult = spawnSync(process.execPath, [resolve(root, "tools/build.mjs")], { cwd: root, encoding: "utf8" });
 if (buildResult.status !== 0) {
@@ -42,7 +42,7 @@ const sourceFiles = (await walk(publication.root)).filter((file) => {
   if (file.path.startsWith(".git/")) return publication.includeGit;
   return !isExcludedSourcePath(file.path) && !file.path.startsWith(".build/") && !file.path.startsWith("dist/");
 });
-const sourceRoot = `${moduleId}-source-v${version}`;
+const sourceRoot = `${moduleId}-v${version}-src`;
 await createZip(resolve(dist, installName), runtimeFiles.map((file) => ({ path: file.absolute, name: `${moduleId}/${file.path}` })));
 validateRuntimeArchiveEntries({
   entries: await listZip(resolve(dist, installName)),
